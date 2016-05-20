@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lokaj v0.1</title>
+    <meta charset="utf-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#klawisz").click(function(){
+            $.ajax({url: "/otwórz/"});
+        });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lokaj v0.1</h1>
+    </header>
+    <div>
+        <img src="http://i.imgur.com/KllvMiY.jpg" style="width: 800px; height:auto;">
+    </div>
+    <p id="wiadomosc">Kliknij żeby otworzyć: <button id="klawisz">Otwórz</button></p>
+    
+    <footer>
+    </footer>
+</body>
+</html>
+
