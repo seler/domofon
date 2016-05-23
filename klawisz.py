@@ -17,9 +17,9 @@ class Klawisz:
         loop.run_in_executor(None, odpal)
 
     def __del__(ja):
-        GPIO.cleanup(self.channel)
+        GPIO.cleanup(ja.kanał)
 
     def sygnał(ja, kanał, stan, czas):
         GPIO.output(kanał, stan)
-        asyncio.sleep(czas)
+        time.sleep(czas)
         GPIO.output(kanał, not stan)

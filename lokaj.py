@@ -3,7 +3,7 @@ from klawisz import Klawisz
 from jinja2 import Template
 
 CHANNEL = 17
-SECONDS = 10
+SECONDS = 5
 
 KLAWISZ = Klawisz(CHANNEL)
  
