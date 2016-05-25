@@ -4,7 +4,6 @@ import json
 
 from domofon.klawisz import Klawisz
 
-DEBUG = True
 CHANNEL = 14
 SECONDS = 5
 KLAWISZ = Klawisz(CHANNEL)
