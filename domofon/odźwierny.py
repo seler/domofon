@@ -6,21 +6,22 @@ import time
 
 ILOSC_SRPAWDZEN = 2
 MAIN_PAUSE = 100
-KANAŁ = 15
+KANAL = 15
+
 SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
 SLACK_HOOK_HEADERS = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 SLACK_HOOK_DATA = json.dumps({
     "channel": "#boot_test",
-    "username": "Odźwierny",
-    "text": "Ktoś stoi u Twoich drzwi, Panie. Czy mam <http://192.168.1.55:8000/|otworzyć>?",
+    "username": "Odzwierny",
+    "text": "Ktos stoi u Twoich drzwi, Panie. Czy mam <http://192.168.1.55:8000/|otworzyc>?",
     "icon_emoji": ":door:",
 })
 
 
-def run():
+if __name__ == '__main__':
     try:
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(KANAŁ, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+        GPIO.setup(KANAL, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         licznik=0
         slack_info=False
         pause=0
@@ -42,7 +43,5 @@ def run():
                 slack_info=False
                 requests.post(SLACK_HOOK_URL, data=SLACK_HOOK_DATA, headers=SLACK_HOOK_HEADERS)
     except:
-        GPIO.cleanup(KANAŁ)
+        GPIO.cleanup(KANAL)
 
-if __name__ == '__main__':
-    run()
