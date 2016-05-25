@@ -1,5 +1,5 @@
-falcon==1.0.0
 gunicorn==19.5.0
 Jinja2==2.8
 requests==2.10.0
 RPi.GPIO==0.6.2
+Flask==0.10.1
