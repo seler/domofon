@@ -12,7 +12,7 @@ SLACK_HOOK_URL = 'https://hooks.slack.com/services/T06771BT6/B1275RQ8M/9O8YKwSa8
 SLACK_HOOK_HEADERS = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 SLACK_HOOK_DATA = json.dumps({
     "channel": "#office",
-    "username": "Odzwierny",
+    "username": "Odźwierny",
     "text": "<!channel> Ktoś sterczy pod drzwiami. Czy mam <http://192.168.1.55:8000/|otworzyć>?",
     "icon_emoji": ":door:",
 })
