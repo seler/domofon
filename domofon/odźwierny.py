@@ -13,7 +13,7 @@ SLACK_HOOK_HEADERS = {'Content-type': 'application/json', 'Accept': 'text/plain'
 SLACK_HOOK_DATA = json.dumps({
     "channel": "#office",
     "username": "Odzwierny",
-    "text": "<!channel> Ktoś sterczy pod drzwiami. Czy mam <http://192.168.1.55:8000/|otworzyc>?",
+    "text": "<!channel> Ktoś sterczy pod drzwiami. Czy mam <http://192.168.1.55:8000/|otworzyć>?",
     "icon_emoji": ":door:",
 })
 
