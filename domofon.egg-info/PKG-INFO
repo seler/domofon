@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: domofon
+Version: 1.0
+Summary: TJ.Software Domofon
+Home-page: http://bitbucket.org/seler/domofon
+Author: Rafał Selewońko
+Author-email: rafal@selewonko.com
+License: BEER-WARE
+Description: TJ.Software Domofon
+        ===================
+        
+        Działa!
+        
+Keywords: tjsoftware domofon odźwierny lokaj klawisz
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

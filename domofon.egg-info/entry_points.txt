@@ -1,0 +1,4 @@
+[console_scripts]
+lokaj = domofon.lokaj:run
+odźwierny = domofon.odźwierny:run
+

@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+domofon/__init__.py
+domofon/klawisz.py
+domofon/lokaj.py
+domofon/odźwierny.py
+domofon.egg-info/PKG-INFO
+domofon.egg-info/SOURCES.txt
+domofon.egg-info/dependency_links.txt
+domofon.egg-info/entry_points.txt
+domofon.egg-info/requires.txt
+domofon.egg-info/top_level.txt
