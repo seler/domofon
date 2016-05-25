@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 from domofon.klawisz import Klawisz
 
-DEBUG = True
 CHANNEL = 14
 SECONDS = 5
 KLAWISZ = Klawisz(CHANNEL)
