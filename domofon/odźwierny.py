@@ -18,7 +18,7 @@ SLACK_HOOK_DATA = json.dumps({
 })
 
 
-if __name__ == '__main__':
+def run():
     try:
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(KANAL, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -45,3 +45,5 @@ if __name__ == '__main__':
     except:
         GPIO.cleanup(KANAL)
 
+if __name__ == '__main__':
+    run()
