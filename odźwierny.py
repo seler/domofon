@@ -20,9 +20,12 @@ if __name__ == '__main__':
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(KANAŁ, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         while True:
-            GPIO.wait_for_edge(KANAŁ, GPIO.FALLING)
-            requests.post(SLACK_HOOK_URL, data=SLACK_HOOK_DATA, headers=SLACK_HOOK_HEADERS)
-            time.sleep(10)
+            GPIO.wait_for_edge(KANAŁ, GPIO.RISING)
+            # upewnić się, że to nie ściema i przycisk nadal jest przytrzymany
+            time.sleep(.1)
+            if GPIO.input(KANAŁ) == GPIO.HIGH:
+                requests.post(SLACK_HOOK_URL, data=SLACK_HOOK_DATA, headers=SLACK_HOOK_HEADERS)
+                time.sleep(10)
             
     except:
         GPIO.cleanup(KANAŁ)

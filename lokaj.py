@@ -2,7 +2,7 @@ import falcon
 from klawisz import Klawisz
 from jinja2 import Template
 
-CHANNEL = 17
+CHANNEL = 14
 SECONDS = 5
 
 KLAWISZ = Klawisz(CHANNEL)
