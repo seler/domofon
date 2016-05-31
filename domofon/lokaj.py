@@ -5,11 +5,11 @@ import subprocess
 import re
 import os
 
-# from domofon.klawisz import Klawisz
+from domofon.klawisz import Klawisz
 
 CHANNEL = 14
 SECONDS = 5
-# KLAWISZ = Klawisz(CHANNEL)
+KLAWISZ = Klawisz(CHANNEL)
 SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
 SLACK_HOOK_HEADERS = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 SLACK_HOOK_DATA = {
@@ -34,6 +34,7 @@ def get_name(ip):
         if name.endswith('.lan'):
             name = name[0:-4]
         return name
+    return "nie wiadomo kto"
 
 
 @app.route("/")
@@ -41,10 +42,11 @@ def lokaj():
     return render_template('lokaj.html')
 
 
-@app.route("/otwórz/")
+@app.route("/otworz/")
 def otwórz():
     data = SLACK_HOOK_DATA.copy()
-    data['text'] = data['text'].format(get_name(request.remote_addr))
+    name = get_name(request.remote_addr)
+    data['text'] = data['text'].format(name)
     KLAWISZ.otwórz(SECONDS)
     requests.post(SLACK_HOOK_URL, data=json.dumps(data), headers=SLACK_HOOK_HEADERS)
     print(data['text'])
