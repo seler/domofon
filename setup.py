@@ -46,7 +46,7 @@ setup(
     install_requires=[
         'peppercorn',
         'gunicorn==19.5.0',
-        'requests==2.10.0',
+        'requests==2.20.0',
         'RPi.GPIO==0.6.2',
         'Flask==0.10.1',
     ],
