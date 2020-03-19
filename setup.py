@@ -48,7 +48,7 @@ setup(
         'gunicorn==19.5.0',
         'requests==2.10.0',
         'RPi.GPIO==0.6.2',
-        'Flask==0.10.1',
+        'Flask==1.0',
     ],
 
     extras_require={
